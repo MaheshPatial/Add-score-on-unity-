@@ -1,0 +1,41 @@
+____________________________________________________________________________________________________________________________________
+*Display score value on screen Unity*
+
+Points to rembember :
+
+
+(To display score on screen first need a text under canvas, then make a refrence of score in code)
+
+:Canvas:
+First create canvas, under canvas make text object  (make sure text canvas is under canvas) :) sure to add  
+
+
+:CODE:
+1) Need to make refrence in order to drag drop value.
+2) Add box colider or appropriate type of colider for (Star, coin or what ever type of object need to be collected)
+3) In UsingEngine add UI refrence (Most important) ---->> Using.System.UI;
+    - Can't add UI refrence by code.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+using unityEngine;
+using System.collection;
+using System.UI;                                 // important 
+
+public class scoreCounter : monobehaviour 
+{
+	public void Text scoreText;              // refrence for score, can drag drop score refrence 
+ 	int scorecounter;
+	
+	void start
+	{
+`	  scoreText = GetComponent<Text>();	// score display, add refrence by text insted of drag drop that score from canvas 	
+ 	}
+	void update
+	{ 
+	 scoreText.text = scoreCounter.Tostring	//score update 
+	}
+
+}  
+
+Ref : 
